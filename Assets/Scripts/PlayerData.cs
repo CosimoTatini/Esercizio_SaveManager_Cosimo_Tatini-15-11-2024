@@ -1,9 +1,4 @@
-using JetBrains.Annotations;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public sealed class SaveProfile<T> where T: SaveProfileData
@@ -15,6 +10,7 @@ public sealed class SaveProfile<T> where T: SaveProfileData
     {
 
     }
+    
     public SaveProfile(string name , T saveData)
     {
         this.name = name;
@@ -22,7 +18,6 @@ public sealed class SaveProfile<T> where T: SaveProfileData
     }
 
 }
-
 
 public abstract record SaveProfileData
 {
