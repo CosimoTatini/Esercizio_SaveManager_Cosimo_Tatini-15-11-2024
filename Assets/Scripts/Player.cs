@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
             damage = 5,
             speed = 10,
             health = 10,
+            // la lista in questo momento non è mai stata inizializzata
+            // quindi devi usare "new" altrimenti stai cercando di assegnare dei valori a qualcosa
+            // che non esiste
             inventory = new List<string> { "spada", "scudo", "pozione", "corda" }
         };
 

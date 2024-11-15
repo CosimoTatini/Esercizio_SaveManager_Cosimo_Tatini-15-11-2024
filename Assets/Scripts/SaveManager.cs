@@ -38,7 +38,11 @@ public static class SaveManager
       {
         throw new FileNotFoundException("Profile already exists:" + saveProfile.name);
       }
-        var serializedData = JsonConvert.SerializeObject(saveProfile, 
+      
+      //Avevi scritto male la parte di ReferenceLoopHandling
+      //la avevi messa fuori dalla funzione SerializeObject()
+      //Ricontrolla dal tuo commit per capire meglio
+      var serializedData = JsonConvert.SerializeObject(saveProfile, 
           Formatting.Indented, 
           new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore});
 
